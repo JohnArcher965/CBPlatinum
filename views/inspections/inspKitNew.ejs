@@ -1,0 +1,146 @@
+ required<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Kitchen details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen" method="POST">
+				<h4>Smoke Alarm</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="smokeAlarm" placeholder="Notes/Comments"></div>
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="floor" placeholder="Notes/Comments"></div>
+				<h4>Windows</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="windows" placeholder="Notes/Comments"></div>
+				<h4>Water</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="water" placeholder="Notes/Comments"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="walls" placeholder="Notes/Comments"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="lights" placeholder="Notes/Comments"></div>
+				<h4>Bin</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="bin" placeholder="Notes/Comments"></div>
+				<h4>Drains</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="drains" placeholder="Notes/Comments"></div>
+				<h4>Sink - Check Plug</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="sinkPlug" placeholder="Notes/Comments"></div>
+				<h4>Under Sink Storage (Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="underSink" placeholder="Notes/Comments"></div>
+				<h4>Waste Disposal</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="wasteDisposal" placeholder="Notes/Comments"></div>
+				<h4>Emergency Torch</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="torch" placeholder="Notes/Comments"></div>
+				<h4>Dustpan and Brush</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dustpan" placeholder="Notes/Comments"></div>
+				<h4>Washing Machine</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="washingMachine" placeholder="Notes/Comments"></div>
+				<h4>Microwave</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="microwave" placeholder="Notes/Comments"></div>
+				<h4>Kettle</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="kettle" placeholder="Notes/Comments"></div>
+				<h4>Toaster</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="toaster" placeholder="Notes/Comments"></div>
+				<h4>Cooker</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cooker" placeholder="Notes/Comments"></div>
+				<h4>Oven</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="oven" placeholder="Notes/Comments"></div>
+				<h4>Extractor</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="extractor" placeholder="Notes/Comments"></div>
+				<h4>Dishwasher</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dishwasher" placeholder="Notes/Comments"></div>
+				<h4>Dishwasher Salt</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dishwasherSalt" placeholder="Notes/Comments"></div>
+				<h4>Cabinets</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cabinets" placeholder="Notes/Comments"></div>
+				<h4>Fridge Freezer</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="fridgeFreezer" placeholder="Notes/Comments"></div>
+				<h4>Chopping Board</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="choppingBoard" placeholder="Notes/Comments"></div>
+				<h4>Cutlery Tray</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cutleryTray" placeholder="Notes/Comments"></div>
+				<h4>Knives</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="knives" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="knivesQ" placeholder="Quantity"></div>
+				<h4>Forks</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="forks" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="forksQ" placeholder="Quantity"></div>
+				<h4>Spoons</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="spoons" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="spoonsQ" placeholder="Quantity"></div>
+				<h4>Teaspoons</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="teaspoons" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="teaspoonsQ" placeholder="Quantity"></div>
+				<h4>Cafetiere</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cafetiere" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="cafetiereQ" placeholder="Quantity"></div>
+				<h4>Oven Glove</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="ovenGlove" placeholder="Notes/Comments"></div>
+				<h4>Knife Block</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="knifeBlock" placeholder="Notes/Comments"></div>
+				<h4>Salad Bowl</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="saladBowl" placeholder="Notes/Comments"></div>
+				<h4>Dinner Plates</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dinnerPlates" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="dinnerPlatesQ" placeholder="Quantity"></div>
+				<h4>Side Plates</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="sidePlates" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="sidePlatesQ" placeholder="Quantity"></div>
+				<h4>Bowls</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="bowls" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="bowlsQ" placeholder="Quantity"></div>
+				<h4>Mugs</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="mugs" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="mugsQ" placeholder="Quantity"></div>
+				<h4>Glasses</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="glasses" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="glassesQ" placeholder="Quantity"></div>
+				<h4>Wine Glasses</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="wineGlasses" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="wineGlassesQ" placeholder="Quantity"></div>
+				<h4>Corkscrew</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="corkscrew" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="corkscrewQ" placeholder="Quantity"></div>
+				<h4>Peeler</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="peeler" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="peelerQ" placeholder="Quantity"></div>
+				<h4>Can Opener</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="canOpener" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="canOpenerQ" placeholder="Quantity"></div>
+				<h4>Scissors</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="scissors" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="scissorsQ" placeholder="Quantity"></div>
+				<h4>Colander</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="colander" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="colanderQ" placeholder="Quantity"></div>
+				<h4>Tea-towel</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="towel" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="towelQ" placeholder="Quantity"></div>
+				<h4>Utensils (Five Pieces)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="utensils" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="utensilsQ" placeholder="Quantity"></div>
+				<h4>Glass Tray</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="glassTray" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="glassTrayQ" placeholder="Quantity"></div>
+				<h4>Wooden Spoon</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="woodenSpoon" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="woodenSpoonQ" placeholder="Quantity"></div>
+				<h4>Frying Pan</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="fryingPan" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="fryingPanQ" placeholder="Quantity"></div>
+				<h4>Sauce Pan</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="saucePan" placeholder="Notes/Comments"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="saucePanQ" placeholder="Quantity"></div>
+				<h4>Dish Drainer</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dishDrainer" placeholder="Notes/Comments"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><textarea class="form-control" id="comments" rows="3" name="comments" placeholder="Additional Comments"></textarea></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

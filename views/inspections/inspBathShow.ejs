@@ -1,0 +1,68 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+		<div class="col-md-3">
+			<p class="lead"><%= inspection.inspectionName %></p>
+			<p>Created by: <em><%= inspection.author.username %></em></p>	
+				<div class="list-group">
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/entrance" class="btn btn-success">Entrance</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception" class="btn btn-success">Reception</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen" class="btn btn-success">Kitchen</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/storage" class="btn btn-success">Storage / Boiler Room</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom" class="btn btn-success">Bedroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom" class="btn btn-success">Bathroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/extra" class="btn btn-success">Extras / Additional Items</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/view" class="btn btn-info">Back</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>" class="btn btn-info">Back to <%= property.propertyName %></a></li>
+				<li class="list-group-item"><a href="/properties" class="btn btn-info">Back to All Properties</a></li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<div class="caption-full">
+					<h1>
+						<%= property.propertyName %> / <%= inspection.inspectionName %> / Bathroom
+					</h1>
+				</div>
+			</div>	
+			
+					<div class="col-md-10 col-sm-12">
+						<div class="thumbnail">
+							<div class="caption">
+								<ul>
+									<li>Floors: <%= bathroom.floor %></li>
+									<li>Walls / Ceiling: <%= bathroom.walls %></li>
+									<li>Lights: <%= bathroom.lights %></li>
+									<li>Toilet:<ul><li>Bowl: <%= bathroom.toilet.bowl %></li><li>Flush: <%= bathroom.toilet.flush %></li><li>Seat: <%= bathroom.toilet.seat %></li></ul></li>
+									<li>Bath / Shower: <%= bathroom.bathShower %></li>
+									<li>Shower Head: <%= bathroom.showerHead %></li>
+									<li>Shower Door: <%= bathroom.showerDoor %></li>
+									<li>Sealant: <%= bathroom.sealant %></li>
+									<li>Water: <%= bathroom.water %></li>
+									<li>Drains: <%= bathroom.drains %></li>
+									<li>Toilet Paper Holder: <%= bathroom.toiletPaperHolder %></li>
+									<li>Toilet Brush: <%= bathroom.toiletBrush %></li>
+									<li>Toiletries: <%= bathroom.toiletries %></li>
+									<li>Bin: <%= bathroom.bin %></li>
+									<li>Bathmat: <%= bathroom.bathmat %></li>
+									<li>Mirror: <%= bathroom.mirror %></li>
+									<li>Comments: <%= bathroom.comments %></li>	  
+								</ul>
+							</div>
+								<p><a href="edit" class="btn btn-xs btn-warning">Edit</a></p>
+								<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/bathroom/<%= bathroom._id %>?_method=DELETE" method="POST">
+									<button class="btn btn-xs btn-danger">Delete</button>
+								</form>
+						</div>
+					</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

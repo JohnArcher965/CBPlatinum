@@ -1,0 +1,146 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Edit Kitchen details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen/<%= kitchen._id %>?_method=PUT" method="POST">
+			<h4>Smoke Alarm</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="smokeAlarm" value="<%= kitchen.smokeAlarm %>"></div>
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="floor" value="<%= kitchen.floor %>"></div>
+				<h4>Windows</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="windows" value="<%= kitchen.windows %>"></div>
+				<h4>Water</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="water" value="<%= kitchen.water %>"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="walls" value="<%= kitchen.walls %>"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="lights" value="<%= kitchen.lights %>"></div>
+				<h4>Bin</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="bin" value="<%= kitchen.bin %>"></div>
+				<h4>Drains</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="drains" value="<%= kitchen.drains %>"></div>
+				<h4>Sink - Check Plug</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="sinkPlug" value="<%= kitchen.sinkPlug %>"></div>
+				<h4>Under Sink Storage (Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="underSink" value="<%= kitchen.underSink %>"></div>
+				<h4>Waste Disposal</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="wasteDisposal" value="<%= kitchen.wasteDisposal %>"></div>
+				<h4>Emergency Torch</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="torch" value="<%= kitchen.torch %>"></div>
+				<h4>Dustpan and Brush</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dustpan" value="<%= kitchen.dustpan %>"></div>
+				<h4>Washing Machine</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="washingMachine" value="<%= kitchen.washingMachine %>"></div>
+				<h4>Microwave</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="microwave" value="<%= kitchen.microwave %>"></div>
+				<h4>Kettle</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="kettle" value="<%= kitchen.kettle %>"></div>
+				<h4>Toaster</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="toaster" value="<%= kitchen.toaster %>"></div>
+				<h4>Cooker</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cooker" value="<%= kitchen.cooker %>"></div>
+				<h4>Oven</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="oven" value="<%= kitchen.oven %>"></div>
+				<h4>Extractor</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="extractor" value="<%= kitchen.extractor %>"></div>
+				<h4>Dishwasher</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dishwasher" value="<%= kitchen.dishwasher %>"></div>
+				<h4>Dishwasher Salt</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dishwasherSalt" value="<%= kitchen.dishwasherSalt %>"></div>
+				<h4>Cabinets</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cabinets" value="<%= kitchen.cabinets %>"></div>
+				<h4>Fridge Freezer</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="fridgeFreezer" value="<%= kitchen.fridgeFreezer %>"></div>
+				<h4>Chopping Board</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="choppingBoard" value="<%= kitchen.choppingBoard %>"></div>
+				<h4>Cutlery Tray</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cutleryTray" value="<%= kitchen.cutleryTray %>"></div>
+				<h4>Knives</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="knives" value="<%= kitchen.knives.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="knivesQ" value=" <%= kitchen.knives.quantity %>"></div>
+				<h4>Forks</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="forks" value="<%= kitchen.forks.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="forksQ" value=" <%= kitchen.forks.quantity %>"></div>
+				<h4>Spoons</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="spoons" value="<%= kitchen.spoons.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="spoonsQ" value=" <%= kitchen.spoons.quantity %>"></div>
+				<h4>Teaspoons</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="teaspoons" value="<%= kitchen.teaspoons.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="teaspoonsQ" value=" <%= kitchen.teaspoons.quantity %>"></div>
+				<h4>Cafetiere</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="cafetiere" value="<%= kitchen.cafetiere.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="cafetiereQ" value=" <%= kitchen.cafetiere.quantity %>"></div>
+				<h4>Oven Glove</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="ovenGlove" value="<%= kitchen.ovenGlove %>"></div>
+				<h4>Knife Block</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="knifeBlock" value="<%= kitchen.knifeBlock %>"></div>
+				<h4>Salad Bowl</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="saladBowl" value="<%= kitchen.saladBowl %>"></div>
+				<h4>Dinner Plates</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dinnerPlates" value="<%= kitchen.dinnerPlates.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="dinnerPlatesQ" value=" <%= kitchen.dinnerPlates.quantity %>"></div>
+				<h4>Side Plates</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="sidePlates" value="<%= kitchen.sidePlates.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="sidePlatesQ" value=" <%= kitchen.sidePlates.quantity %>"></div>
+				<h4>Bowls</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="bowls" value="<%= kitchen.bowls.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="bowlsQ" value=" <%= kitchen.bowls.quantity %>"></div>
+				<h4>Mugs</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="mugs" value="<%= kitchen.mugs.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="mugsQ" value=" <%= kitchen.mugs.quantity %>"></div>
+				<h4>Glasses</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="glasses" value="<%= kitchen.glasses.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="glassesQ" value=" <%= kitchen.glasses.quantity %>"></div>
+				<h4>Wine Glasses</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="wineGlasses" value="<%= kitchen.wineGlasses.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="wineGlassesQ" value=" <%= kitchen.wineGlasses.quantity %>"></div>
+				<h4>Corkscrew</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="corkscrew" value="<%= kitchen.corkscrew.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="corkscrewQ" value=" <%= kitchen.corkscrew.quantity %>"></div>
+				<h4>Peeler</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="peeler" value="<%= kitchen.peeler.comments %>"></div>
+						<div class="form-group"><input class="form-control" type="number" name="peelerQ" value=" <%= kitchen.peeler.quantity %>"></div>
+				<h4>Can Opener</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="canOpener" value="<%= kitchen.canOpener.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="canOpenerQ" value=" <%= kitchen.canOpener.quantity %>"></div>
+				<h4>Scissors</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="scissors" value="<%= kitchen.scissors.comments %>"></div>
+						<div class="form-group"><input class="form-control" type="number" name="scissorsQ" value=" <%= kitchen.scissors.quantity %>"></div>
+				<h4>Colander</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="colander" value="<%= kitchen.colander.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="colanderQ" value=" <%= kitchen.colander.quantity %>"></div>
+				<h4>Tea-towel</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="towel" value="<%= kitchen.towel.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="towelQ" value=" <%= kitchen.towel.quantity %>"></div>
+				<h4>Utensils (Five Pieces)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="utensils" value="<%= kitchen.utensils.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="utensilsQ" value=" <%= kitchen.utensils.quantity %>"></div>
+				<h4>Glass Tray</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="glassTray" value="<%= kitchen.glassTray.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="glassTrayQ" value=" <%= kitchen.glassTray.quantity %>"></div>
+				<h4>Wooden Spoon</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="woodenSpoon" value="<%= kitchen.woodenSpoon.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="woodenSpoonQ" value=" <%= kitchen.woodenSpoon.quantity %>"></div>
+				<h4>Frying Pan</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="fryingPan" value="<%= kitchen.fryingPan.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="fryingPanQ" value=" <%= kitchen.fryingPan.quantity %>"></div>
+				<h4>Sauce Pan</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="saucePan" value="<%= kitchen.saucePan.comments %>"></div>
+						<div class="form-group"><input class="form-control" required type="number" name="saucePanQ" value=" <%= kitchen.saucePan.quantity %>"></div>
+				<h4>Dish Drainer</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="dishDrainer" value="<%= kitchen.dishDrainer %>"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><input class="form-control" name="comments" value="<%= kitchen.comments %>"></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

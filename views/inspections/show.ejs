@@ -1,0 +1,212 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+		<div class="col-md-3">
+			<p class="lead"><%= inspection.inspectionName %></p>
+		<p>Created by: <em><%= inspection.author.username %></em></p>	
+			<div class="list-group">
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/entrance" class="btn btn-success">Entrance / Hallway</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception" class="btn btn-success">Reception</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen" class="btn btn-success">Kitchen</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/storage" class="btn btn-success">Storage / Boiler Room</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom" class="btn btn-success">Bedroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom" class="btn btn-success">Bathroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/extra" class="btn btn-success">Extras / Additional Items</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>" class="btn btn-info">Back to <%= property.propertyName %></a></li>
+				<li class="list-group-item"><a href="/properties" class="btn btn-info">Back to All Properties</a></li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<img class="responsive-image" src="<%= property.image %>">
+				<div class="caption-full">
+					<h4>
+						<%= property.propertyName %>
+					</h4>
+				</div>
+			</div>
+			<div class="well">
+				<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.entrance.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <% function entNum(){if(i = 0){document.getElementById("entNum").innerHTML = "Entrance"} else {document.getElementById("entNum").innerHTML = "Entrance: " + i+1 }} %> 
+							  <h4 id="entNum">Entrance</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.entrance[i].comments.substring(0, 50) %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/entrance/<%= inspection.entrance[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/entrance/<%= inspection.entrance[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div>
+				
+				<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.reception.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <% function entNum(){if(i = 0){document.getElementById("entNum").innerHTML = "Entrance"} else {document.getElementById("entNum").innerHTML = "Entrance: " + i+1 }} %> 
+							  <h4 id="entNum">Reception</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.reception[i].comments.substring(0, 50) %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception/<%= inspection.reception[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/reception/<%= inspection.reception[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div>
+					<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.kitchen.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <h4>Kitchen</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.kitchen[i].comments.substring(0, 50) %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen/<%= inspection.kitchen[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/kitchen/<%= inspection.kitchen[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div>
+				<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.storage.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <h4>Storage / Boiler Room</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.storage[i].comments.substring(0, 50) %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/storage/<%= inspection.storage[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/storage/<%= inspection.storage[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div>
+				<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.bedroom.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <h4><%= inspection.bedroom[i].title.substring(0, 7) %> Bedroom</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.bedroom[i].comments %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom/<%= inspection.bedroom[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/bedroom/<%= inspection.bedroom[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div>
+				
+				<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.bathroom.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <h4>Bathroom</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.bathroom[i].comments %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom/<%= inspection.bathroom[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/bathroom/<%= inspection.bathroom[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div>	
+				
+				<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.extra.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <h4>Additional / Extra</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.extra[i].comments %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/extra/<%= inspection.extra[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/extra/<%= inspection.extra[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div>	
+				
+<!-- 				
+				<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% for (var i = 0; i < inspection.reception.length; i++) { %>
+					<div class="col-md-3 col-sm-6">
+					  <div class="thumbnail">
+						  <div class="caption">
+							  <h4>Recep</h4>
+							  <h5><em>Comments:</em></h5>
+							  <p><%= inspection.reception[i].comments %>...</p>
+							</div>
+							<p>
+								<a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception/<%= inspection.reception[i]._id %>/view" class="btn btn-xs btn-primary">View</a>
+							</p>
+							<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/reception/<%= inspection.reception[i]._id %>?_method=DELETE" method="POST">
+								<button class="btn btn-xs btn-danger">Delete</button>
+							</form>
+						  
+					  </div>
+					</div>
+					<% } %>
+				</div> -->
+				
+			</div>
+			
+		</div>
+
+
+		
+	</div>
+</div>
+
+
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

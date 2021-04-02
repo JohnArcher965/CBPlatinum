@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Reception details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception" method="POST">
+			<h3>Reception</h3>	
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="floor" placeholder="Notes/Comments"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="walls" placeholder="Notes/Comments"></div>
+				<h4>Info Pack</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="infoPack" placeholder="Notes/Comments"></div>
+				<h4>Wi-Fi</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="wifi" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="wifiS" placeholder="Speed Test"></div>
+				<h4>Pictures / Decorations</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="decor" placeholder="Notes/Comments"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="lights" placeholder="Notes/Comments"></div>
+				<h4>Television</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="tv" placeholder="Notes/Comments"></div>
+				<h4>Heating</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="heating" placeholder="Notes/Comments"></div>
+				<h4>Air Con</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="aircon" placeholder="Notes/Comments"></div>
+				<h4>Sofa</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="sofa" placeholder="Notes/Comments"></div>
+				<h4>Scatter Cushions</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="scatterC" placeholder="Notes/Comments"></div>
+				<h4>Blinds / Curtains</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="blinds" placeholder="Notes/Comments"></div>
+				<h4>Windows</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="windows" placeholder="Notes/Comments"></div>
+				<h4>Dining Table</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="diningT" placeholder="Notes/Comments"></div>
+				<h4>Dining Chairs</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="diningC" placeholder="Notes/Comments"></div>
+				<h4>Balcony</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="balcony" placeholder="Notes/Comments"></div>
+				<h4>Balcony Furniture</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="balconyF" placeholder="Notes/Comments"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><textarea class="form-control" id="comments" rows="3" name="comments" placeholder="Additional Comments"></textarea></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

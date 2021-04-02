@@ -1,0 +1,72 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Edit Reception details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom/<%= bedroom._id %>?_method=PUT" method="POST">
+				<h4>Title</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="title" value="<%= bedroom.title %>"></div>
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="floor" value="<%= bedroom.floor %>"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="walls" value="<%= bedroom.walls %>"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="lights" value="<%= bedroom.lights %>"></div>
+				<h4>Blinds / Curtains</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="blinds" value="<%= bedroom.blinds %>"></div>
+				<h4>Windows</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="windows" value="<%= bedroom.windows %>"></div>
+				<h4>Pillows</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="pillows" value="<%= bedroom.pillows.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="pillowsQ" value="<%= bedroom.pillows.quantity %>"></div>
+				<h4>Duvet</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="duvet" value="<%= bedroom.duvet.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="duvetQ" value="<%= bedroom.duvet.quantity %>"></div>
+				<h4>Linen</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="linen" value="<%= bedroom.linen %>"></div>
+				<h4>Towels</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="towels" value="<%= bedroom.towels.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="towelsQ" value="<%= bedroom.towels.quantity %>"></div>
+				<h4>Lamps</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="lamps" value="<%= bedroom.lamps.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="lampsQ" value="<%= bedroom.lamps.quantity %>"></div>
+				<h4>Bed Throw</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="bedThrow" value="<%= bedroom.bedThrow.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="bedThrowQ" value="<%= bedroom.bedThrow.quantity %>"></div>
+				<h4>Cushions</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="cushions" value="<%= bedroom.cushions.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="cushionsQ" value="<%= bedroom.cushions.quantity %>"></div>
+				<h4>Bedside Chests</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="bedsideChests" value="<%= bedroom.bedsideChests.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="bedsideChestsQ" value="<%= bedroom.bedsideChests.quantity %>"></div>
+				<h4>Chest of Drawers</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="chest" value="<%= bedroom.chest %>"></div>
+				<h4>Wardrobe</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="wardrobe" value="<%= bedroom.wardrobe %>"></div>
+				<h4>Under Bed</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="underBed" value="<%= bedroom.underBed %>"></div>
+				<h4>Coat Hangers</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="hangers" value="<%= bedroom.hangers.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="hangersQ" value="<%= bedroom.hangers.quantity %>"></div>
+				<h4>Pictures / Decorations</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="decorations" value="<%= bedroom.decorations %>"></div>
+				<h4>Hairdryer</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="hairdryer" value="<%= bedroom.hairdryer %>"></div>
+				<h4>Multi plug</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="multiplug" value="<%= bedroom.multiplug %>"></div>
+				<h4>Mirror</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="mirror" value="<%= bedroom.mirror %>"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><input class="form-control" name="comment" value="<%= bedroom.comments %>"></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

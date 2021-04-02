@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Storage / Boiler Room details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/storage" method="POST">
+			<div id="storage">
+				<h4>RCD Board</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="rcdBoard" placeholder="Notes/Comments"></div>
+				<h4>Steam Iron</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="iron" placeholder="Notes/Comments"></div>
+				<h4>Ironing Board</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="ironingBoard" placeholder="Notes/Comments"></div>
+				<h4>Portabel Fan</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="fan" placeholder="Notes/Comments"></div>
+				<h4>Portable Heater</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="heater" placeholder="Notes/Comments"></div>
+				<h4>Mop &amp; Bucket</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="mopBucket" placeholder="Notes/Comments"></div>
+				<h4>Broom</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="broom" placeholder="Notes/Comments"></div>
+				<h4>Vacuum Cleaner</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="vacuum" placeholder="Notes/Comments"></div>
+				<h4>Clothes Airer</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="clothesAirer" placeholder="Notes/Comments"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><textarea class="form-control" id="bath2comments" rows="3" name="comment" placeholder="Additional Comments"></textarea></div>
+			</div>
+        	<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

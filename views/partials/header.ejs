@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>CB Platinum Inspections System</title>
+		<script src="https://kit.fontawesome.com/14e2cd7ef7.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body>
+        
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">CB Platinum - IS</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+					<% if(!currentUser){ %>
+                    <li><a href="/login">Login</a></li>
+                    <% } else { %>
+                    <li><a>Signed In As <%= currentUser.username %> <% if(currentUser.isAdmin){ %><strong> - Admin</strong><% } %></a></li>
+                    <li><a href="/logout">Logout</a></li>
+					<% } %>
+                </ul>
+            </div>
+        
+        </div>
+    </nav>
+		
+	<div class="container">
+			<% if(error && error.length > 0) { %>
+			<div class="alert alert-danger" role="alert">
+ 				 <%= error %>
+			</div> 
+			<% } %>
+		</div>
+   		<div class="container">
+			<% if(success && success.length > 0) { %>
+			<div class="alert alert-success" role="alert">
+ 				 <%= success %>
+			</div> 
+			<% } %>  
+		</div>
+	      
+	      

@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Additional / Extra details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/extra" method="POST">
+			<div id="entrance">
+			<h3>Entrance / Hallway</h3>	
+				<h4>Baby Cot</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="babycot" value="<%= extra.babycot %>"></div>
+				<h4>Extra Bed</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="extraBed" value="<%= extra.extraBed %>"></div>
+				<h4>Welcome Basket</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="welcomeBasket" value="<%= extra.welcomeBasket %>"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><input class="form-control" name="comments" value="<%= extra.comments %>"></div>
+			</div>
+        	<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

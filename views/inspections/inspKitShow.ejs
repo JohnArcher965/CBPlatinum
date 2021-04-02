@@ -1,0 +1,113 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+		<div class="col-md-3">
+			<p class="lead"><%= inspection.inspectionName %></p>
+			<p>Created by: <em><%= inspection.author.username %></em></p>	
+				<div class="list-group">
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/entrance" class="btn btn-success">Entrance</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception" class="btn btn-success">Reception</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen" class="btn btn-success">Kitchen</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/storage" class="btn btn-success">Storage / Boiler Room</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom" class="btn btn-success">Bedroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom" class="btn btn-success">Bathroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/extra" class="btn btn-success">Extras / Additional Items</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/view" class="btn btn-info">Back</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>" class="btn btn-info">Back to <%= property.propertyName %></a></li>
+				<li class="list-group-item"><a href="/properties" class="btn btn-info">Back to All Properties</a></li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<div class="caption-full">
+					<h1>
+						<%= property.propertyName %> / <%= inspection.inspectionName %> / Kitchen
+					</h1>
+				</div>
+			</div>	
+			
+					<div class="col-md-10 col-sm-12">
+						<div class="thumbnail">
+							<div class="caption">
+								
+								<ul>
+									<li>Floors: <%= kitchen.floor %></li>
+									<li>Walls / Ceiling: <%= kitchen.walls %></li>
+									<li>Lights: <%= kitchen.lights %></li>
+									<li>Windows: <%= kitchen.windows %></li>
+									<li>Bin: <%= kitchen.bin %></li>
+									<li>Water: <%= kitchen.water %></li>
+									<li>Drains: <%= kitchen.drains %></li>
+									<li>Sink &amp; Plug: <%= kitchen.sinkPlug %></li>
+									<li>Dish Drainer <%= kitchen.dishDrainer %></li>
+									<li>Waste Disposal: <%= kitchen.wasteDisposal %></li>
+									<li>Under Sink: <%= kitchen.underSink %></li>
+									<li>Torch: <%= kitchen.torch %></li>
+									<li>Dustpan and Brush: <%= kitchen.dustpan %></li>
+									<li>Some Alarm: <%= kitchen.smokeAlarm %></li>
+									<hr>
+									<li>Washing Machine: <%= kitchen.washingMachine %></li>
+									<li>Fridge Freezer: <%= kitchen.fridgeFreezer %></li>
+									<li>Dishwasher:
+										<ul>
+											<li>Comments: <%= kitchen.dishwasher %></li>
+											<li>Salt: <%= kitchen.dishwasher %></li>
+										</ul></li>
+									<li>Cooker: <%= kitchen.cooker %></li>
+									<li>Oven: <%= kitchen.oven %></li>
+									<li>Microwave: <%= kitchen.microwave %></li>
+									<li>Kettle: <%= kitchen.kettle %></li>
+									<li>Toaster: <%= kitchen.toaster %></li>
+									<li>Extractor Fan: <%= kitchen.extractor %></li>
+									<li>Cabinets: <%= kitchen.cabinets %></li>
+									<hr>
+									<li>Chopping Board: <%= kitchen.choppingBoard %></li>
+									<li>Cutlery Tray: <%= kitchen.cutleryTray %></li>
+									<li>Knives<ul><li>Comments:<%= kitchen.knives.comments %></li><li>Quantity: <%= kitchen.knives.quantity %></li></ul></li>
+									<li>Forks<ul><li>Comments:<%= kitchen.forks.comments %></li><li>Quantity: <%= kitchen.forks.quantity %></li></ul></li>
+									<li>Spoons<ul><li>Comments:<%= kitchen.spoons.comments %></li><li>Quantity: <%= kitchen.spoons.quantity %></li></ul></li>
+									<li>Teaspoons<ul><li>Comments:<%= kitchen.teaspoons.comments %></li><li>Quantity: <%= kitchen.teaspoons.quantity %></li></ul></li>
+									<li>Cafetiere<ul><li>Comments:<%= kitchen.cafetiere.comments %></li><li>Quantity: <%= kitchen.cafetiere.quantity %></li></ul></li>
+									<li>Towel<ul><li>Comments:<%= kitchen.towel.comments %></li><li>Quantity: <%= kitchen.towel.quantity %></li></ul></li>
+									<hr>
+									<li>Dinner Plates<ul><li>Comments:<%= kitchen.dinnerPlates.comments %></li><li>Quantity: <%= kitchen.dinnerPlates.quantity %></li></ul></li>
+									<li>Side Plates<ul><li>Comments:<%= kitchen.sidePlates.comments %></li><li>Quantity: <%= kitchen.sidePlates.quantity %></li></ul></li>
+									<li>Bowls<ul><li>Comments:<%= kitchen.bowls.comments %></li><li>Quantity: <%= kitchen.bowls.quantity %></li></ul></li>
+									<li>Mugs / Cups<ul><li>Comments:<%= kitchen.mugs.comments %></li><li>Quantity: <%= kitchen.mugs.quantity %></li></ul></li>
+									<li>Glasses<ul><li>Comments:<%= kitchen.glasses.comments %></li><li>Quantity: <%= kitchen.glasses.quantity %></li></ul></li>
+									<li>Wine Glasses<ul><li>Comments:<%= kitchen.wineGlasses.comments %></li><li>Quantity: <%= kitchen.wineGlasses.quantity %></li></ul></li>
+									<li>Corkscrew<ul><li>Comments:<%= kitchen.corkscrew.comments %></li><li>Quantity: <%= kitchen.corkscrew.quantity %></li></ul></li>
+									<hr>
+									<li>Oven Glove: <%= kitchen.ovenGlove %></li>
+									<li>Knife Block: <%= kitchen.knifeBlock %></li>
+									<li>Peeler<ul><li>Comments:<%= kitchen.peeler.comments %></li><li>Quantity: <%= kitchen.peeler.quantity %></li></ul></li>
+									<li>Can Opener<ul><li>Comments:<%= kitchen.canOpener.comments %></li><li>Quantity: <%= kitchen.canOpener.quantity %></li></ul></li>
+									<li>Scissors<ul><li>Comments:<%= kitchen.scissors.comments %></li><li>Quantity: <%= kitchen.scissors.quantity %></li></ul></li>
+									<li>Colander<ul><li>Comments:<%= kitchen.colander.comments %></li><li>Quantity: <%= kitchen.colander.quantity %></li></ul></li>
+									<li>Grater<ul><li>Comments:<%= kitchen.grater.comments %></li><li>Quantity: <%= kitchen.grater.quantity %></li></ul></li>
+									<li>Utensils<ul><li>Comments:<%= kitchen.utensils.comments %></li><li>Quantity: <%= kitchen.utensils.quantity %></li></ul></li>
+									<li>Wooden Spoon<ul><li>Comments:<%= kitchen.woodenSpoon.comments %></li><li>Quantity: <%= kitchen.woodenSpoon.quantity %></li></ul></li>
+									<li>Glass Tray<ul><li>Comments:<%= kitchen.glassTray.comments %></li><li>Quantity: <%= kitchen.glassTray.quantity %></li></ul></li>
+									<li>Frying Pan<ul><li>Comments:<%= kitchen.fryingPan.comments %></li><li>Quantity: <%= kitchen.fryingPan.quantity %></li></ul></li>
+									<li>Sauce Pan<ul><li>Comments:<%= kitchen.saucePan.comments %></li><li>Quantity: <%= kitchen.saucePan.quantity %></li></ul></li>
+									<hr>
+									<li>Comments: <%= kitchen.comments %></li>	  
+								</ul>
+							</div>
+								<p><a href="edit" class="btn btn-xs btn-warning">Edit</a></p>
+								<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/kitchen/<%= kitchen._id %>?_method=DELETE" method="POST">
+									<button class="btn btn-xs btn-danger">Delete</button>
+								</form>
+						</div>
+					</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

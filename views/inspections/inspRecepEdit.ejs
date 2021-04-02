@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Edit Reception details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception/<%= reception._id %>?_method=PUT" method="POST">
+			<h3>Reception</h3>	
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="floor" value="<%= reception.floor %>"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="walls" value="<%= reception.walls %>"></div>
+				<h4>Info Pack</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="infoPack" value="<%= reception.infoPack %>"></div>
+				<h4>Wi-Fi</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="wifi" value="<%= reception.wifi.comments %>"></div>
+					<div class="form-group"><input class="form-control" required type="text" name="wifiS" value="<%= reception.wifi.speed %>"></div>
+				<h4>Pictures / Decorations</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="decor" value="<%= reception.decor %>"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="lights" value="<%= reception.lights %>"></div>
+				<h4>Television</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="tv" value="<%= reception.tv %>"></div>
+				<h4>Heating</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="heating" value="<%= reception.heating %>"></div>
+				<h4>Air Con</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="aircon" value="<%= reception.aircon %>"></div>
+				<h4>Sofa</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="sofa" value="<%= reception.sofa %>"></div>
+				<h4>Scatter Cushions</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="scatterC" value="<%= reception.cushions %>"></div>
+				<h4>Blinds / Curtains</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="blinds" value="<%= reception.blinds %>"></div>
+				<h4>Windows</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="windows" value="<%= reception.windows %>"></div>
+				<h4>Dining Table</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="diningT" value="<%= reception.diningTable %>"></div>
+				<h4>Dining Chairs</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="diningC" value="<%= reception.diningChairs %>"></div>
+				<h4>Balcony</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="balcony" value="<%= reception.balcony %>"></div>
+				<h4>Balcony Furniture</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="balconyF" value="<%= reception.balconyFurniture %>"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><input class="form-control" rows="3" name="comments" value="<%= reception.comments %>"></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

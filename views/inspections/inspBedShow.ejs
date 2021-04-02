@@ -1,0 +1,111 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+		<div class="col-md-3">
+			<p class="lead"><%= inspection.inspectionName %></p>
+			<p>Created by: <em><%= inspection.author.username %></em></p>	
+				<div class="list-group">
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/entrance" class="btn btn-success">Entrance</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception" class="btn btn-success">Reception</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen" class="btn btn-success">Kitchen</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/storage" class="btn btn-success">Storage / Boiler Room</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom" class="btn btn-success">Bedroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom" class="btn btn-success">Bathroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/extra" class="btn btn-success">Extras / Additional Items</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/view" class="btn btn-info">Back</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>" class="btn btn-info">Back to <%= property.propertyName %></a></li>
+				<li class="list-group-item"><a href="/properties" class="btn btn-info">Back to All Properties</a></li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<div class="caption-full">
+					<h1>
+						<%= property.propertyName %> / <%= inspection.inspectionName %> / <%= bedroom.title %> Bedroom
+					</h1>
+				</div>
+			</div>	
+			
+					<div class="col-md-10 col-sm-12">
+						<div class="thumbnail">
+							<div class="caption">
+								
+								<ul>
+									<li>Floors: <%= bedroom.floor %></li>
+									<li>Walls / Ceiling: <%= bedroom.walls %></li>
+									<li>Lights: <%= bedroom.lights %></li>
+									<li>Windows: <%= bedroom.windows %></li>
+									<li>Blinds: <%= bedroom.blinds %></li>
+									<hr>
+									<li>Pillows:
+										<ul>
+											<li>Comments:<%= bedroom.pillows.comments %></li>
+											<li>Quantity: <%= bedroom.pillows.quantity %></li>
+										</ul>
+									</li>
+									<li>Linen: <%= bedroom.linen %></li>
+									<li>Towels:
+										<ul>
+											<li>Comments:<%= bedroom.towels.comments %></li>
+											<li>Quantity: <%= bedroom.towels.quantity %></li>
+										</ul>
+									</li>
+									<li>Lamps:
+										<ul>
+											<li>Comments:<%= bedroom.lamps.comments %></li>
+											<li>Quantity: <%= bedroom.lamps.quantity %></li>
+										</ul>
+									</li>
+									<li>Bed Throw:
+										<ul>
+											<li>Comments:<%= bedroom.bedThrow.comments %></li>
+											<li>Quantity: <%= bedroom.bedThrow.quantity %></li>
+										</ul>
+									</li>
+									<li>Scatter Cushions:
+										<ul>
+											<li>Comments:<%= bedroom.cushions.comments %></li>
+											<li>Quantity: <%= bedroom.cushions.quantity %></li>
+										</ul>
+									</li>
+									<li>Mirror: <%= bedroom.mirror %></li>
+									<li>Hair Dryer: <%= bedroom.hairdryer %></li>
+									<li>Multi Plug: <%= bedroom.multiplug %></li>
+									<li>Decorations: <%= bedroom.decorations %></li>
+									<hr>
+									<li>Bedside Chests:
+										<ul>
+											<li>Comments:<%= bedroom.bedsideChests.comments %></li>
+											<li>Quantity: <%= bedroom.bedsideChests.quantity %></li>
+										</ul>
+									</li>
+									<li>Chest of Drawers: <%= bedroom.chest %></li>
+									<li>Wardrobe: <%= bedroom.wardrobe %></li>
+									<li>Under Bed: <%= bedroom.underBed %></li>
+									<li>Coat Hangers:
+										<ul>
+											<li>Comments:<%= bedroom.hangers.comments %></li>
+											<li>Quantity: <%= bedroom.hangers.quantity %></li>
+										</ul>
+									</li>
+									<hr>
+									<li>Comments: <%= bedroom.comments %></li>	  
+								</ul>
+							</div>
+								<p><a href="edit" class="btn btn-xs btn-warning">Edit</a></p>
+								<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/bedroom/<%= bedroom._id %>?_method=DELETE" method="POST">
+									<button class="btn btn-xs btn-danger">Delete</button>
+								</form>
+						</div>
+					</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

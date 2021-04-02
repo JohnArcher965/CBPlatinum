@@ -1,0 +1,72 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Bedroom details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom" method="POST">
+				<h4>Bedroom Title</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="title" placeholder="Master / Second"></div>
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="floor" placeholder="Notes/Comments"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="walls" placeholder="Notes/Comments"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="lights" placeholder="Notes/Comments"></div>
+				<h4>Blinds / Curtains</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="blinds" placeholder="Notes/Comments"></div>
+				<h4>Windows</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="windows" placeholder="Notes/Comments"></div>
+				<h4>Pillows</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="pillows" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="pillowsQ" placeholder="Quantity"></div>
+				<h4>Duvet</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="duvet" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="duvetQ" placeholder="Quantity"></div>
+				<h4>Linen (Clean and Present)</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="linen" placeholder="Notes/Comments"></div>
+				<h4>Towels</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="towels" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="towelsQ" placeholder="Quantity"></div>
+				<h4>Lamps</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="lamps" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="lampsQ" placeholder="Quantity"></div>
+				<h4>Bed Throw</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="bedThrow" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="bedThrowQ" placeholder="Quantity"></div>
+				<h4>Cushions</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="cushions" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="cushionsQ" placeholder="Quantity"></div>
+				<h4>Bedside Chests</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="bedsideChests" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="bedsideChestsQ" placeholder="Quantity"></div>
+				<h4>Chest of Drawers</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="chest" placeholder="Notes/Comments"></div>
+				<h4>Wardrobe</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="wardrobe" placeholder="Notes/Comments"></div>
+				<h4>Under Bed</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="underBed" placeholder="Notes/Comments"></div>
+				<h4>Hangers</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="hangers" placeholder="Notes/Comments"></div>
+					<div class="form-group"><input class="form-control" required type="number" name="hangersQ" placeholder="Quantity"></div>
+				<h4>Pictures / Decorations</h4>
+					<div class="form-group"><input class="form-control" required type="text" name="decorations" placeholder="Notes/Comments"></div>
+				<h4>Hairdryer</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="hairdryer" placeholder="Notes/Comments"></div>
+				<h4>Multi plug</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="multiplug" placeholder="Notes/Comments"></div>
+				<h4>Full Length Mirror</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="mirror" placeholder="Notes/Comments"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><textarea class="form-control" id="comments" rows="3" name="comment" placeholder="Additional Comments"></textarea></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

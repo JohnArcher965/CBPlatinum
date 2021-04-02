@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Bedroom details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom/<%= bathroom._id %>?_method=PUT" method="POST">
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" type="text" name="floor" required value=" <%= bathroom.floor %>"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" type="text" name="walls" required value=" <%= bathroom.walls %>"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" type="text" name="lights" required value=" <%= bathroom.lights %>"></div>
+				<h4>Toilet:</h4>
+					<h3>Bowl:</h3><div class="form-group"><input class="form-control" type="text" name="bowl" required value="<%= bathroom.toilet.bowl %>"></div>
+					<h3>Seat</h3><div class="form-group"><input class="form-control" type="text" name="seat" required value="<%= bathroom.toilet.seat %>"></div>
+					<h3>Flush</h3><div class="form-group"><input class="form-control" type="text" name="flush" required value="<%= bathroom.toilet.flush %>"></div>
+				<h4>Bath / Shower</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="bathShower" value=" <%= bathroom.bathShower %>"></div>
+				<h4>Shower Head</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="showerHead" value=" <%= bathroom.showerHead %>"></div>
+				<h4>Sealant</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="sealant" value=" <%= bathroom.sealant %>"></div>
+				<h4>Shower Door</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="showerDoor" value=" <%= bathroom.showerDoor %>"></div>
+				<h4>Water</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="water" value=" <%= bathroom.water %>"></div>
+				<h4>Drains</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="drains" value=" <%= bathroom.drains %>"></div>
+				<h4>Toilet Paper Holder</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="toiletPaperHolder" value=" <%= bathroom.toiletPaperHolder %>"></div>
+				<h4>Toilet Brush</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="toiletBrush" value=" <%= bathroom.toiletBrush %>"></div>
+				<h4>Toiletries</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="toiletries" value=" <%= bathroom.toiletries %>"></div>
+				<h4>Bin</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="bin" value=" <%= bathroom.bin %>"></div>
+				<h4>Bathmat</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="bathmat" value=" <%= bathroom.bathmat %>"></div>
+				<h4>Mirror</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="mirror" value=" <%= bathroom.mirror %>"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><input class="form-control" name="comments" value="<%= bathroom.comments %>"></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Entrance/Hallway details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/entrance" method="POST">
+			<div id="entrance">
+			<h3>Entrance / Hallway</h3>	
+				<h4>Locks</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="locks" placeholder="Notes/Comments"></div>
+				<h4>Walls</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="walls" placeholder="Notes/Comments"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="lights" placeholder="Notes/Comments"></div>
+				<h4>Floor</h4>
+						<div class="form-group"><input class="form-control" required type="text" name="floor" placeholder="Notes/Comments"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><textarea class="form-control" id="bath2comments" rows="3" name="comment" placeholder="Additional Comments"></textarea></div>
+			</div>
+        	<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

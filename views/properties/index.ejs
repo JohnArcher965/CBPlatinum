@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to CB Platinum</h1>        
+            <p>Select a Property to create an inspection report!</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/properties/new">Add new Property</a>
+            </p>
+        </div>
+    </header>
+
+	    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% properties.forEach(function(property){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+					<img src="<%= property.image %>">
+                    <div class="caption">
+                        <h4><i class="fas fa-bed"></i> <%= property.beds %> <span style="font-size: 0.8em"><i class="fas fa-ellipsis-h"></i></span> <i class="fas fa-bath"></i> <%= property.baths %> <span style="font-size: 0.8em"><i class="fas fa-ellipsis-h"></i></span> <i class="fas fa-couch"></i> <%= property.receptions %></h4>
+						<h4><%= property.propertyName %></h4>
+						<h5><i class="fas fa-fingerprint"></i> <%= property.propertyId %></h5>
+                    </div>
+                    <p>
+                        <a href="/properties/<%= property._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+	
+</div>
+	<% include ../partials/footer %>

@@ -1,0 +1,61 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+		<div class="col-md-3">
+			<p class="lead"><%= inspection.inspectionName %></p>
+			<p>Created by: <em><%= inspection.author.username %></em></p>	
+				<div class="list-group">
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/entrance" class="btn btn-success">Entrance</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/reception" class="btn btn-success">Reception</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/kitchen" class="btn btn-success">Kitchen</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/storage" class="btn btn-success">Storage / Boiler Room</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bedroom" class="btn btn-success">Bedroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom" class="btn btn-success">Bathroom</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/extra" class="btn btn-success">Extras / Additional Items</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>/inspections/<%= inspection._id %>/view" class="btn btn-info">Back</a></li>
+				<li class="list-group-item"><a href="/properties/<%= property._id %>" class="btn btn-info">Back to <%= property.propertyName %></a></li>
+				<li class="list-group-item"><a href="/properties" class="btn btn-info">Back to All Properties</a></li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<div class="caption-full">
+					<h1>
+						<%= property.propertyName %> / <%= inspection.inspectionName %> / Storage
+					</h1>
+				</div>
+			</div>	
+			
+					<div class="col-md-10 col-sm-12">
+						<div class="thumbnail">
+							<div class="caption">
+								<ul>
+									<li>RCD Board: <%= storage.rcdBoard %></li>
+									<li>Steam Iron: <%= storage.iron %></li>
+									<li>Ironing Board: <%= storage.ironingBoard %></li>
+									<li>Portable fan: <%= storage.fan %></li>
+									<li>Portable Heater: <%= storage.heater %></li>
+									<li>Mop &amp; Bucket: <%= storage.mopBucket %></li>
+									<li>Broom: <%= storage.broom %></li>
+									<li>Vacuum Cleaner: <%= storage.vacuum %></li>
+									<li>Clothes Airer: <%= storage.clothesAirer %></li>
+									<li>Comments: <%= storage.comments %></li>	  
+								</ul>
+							</div>
+								<p><a href="edit" class="btn btn-xs btn-warning">Edit</a></p>
+								<form  class="deleteForm" action="/properties/<%=property._id %>/inspections/<%= inspection._id %>/storage/<%= storage._id %>?_method=DELETE" method="POST">
+									<button class="btn btn-xs btn-danger">Delete</button>
+								</form>
+						</div>
+					</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>

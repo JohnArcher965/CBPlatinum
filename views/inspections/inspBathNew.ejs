@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+        <h1 style="text-align: center;">Add Bedroom details to: <%= inspection.inspectionName %></h1>
+		
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/properties/<%= property._id %>/inspections/<%= inspection._id %>/bathroom" method="POST">
+				<h4>Floor / Carpet</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="floor" placeholder="Notes/Comments"></div>
+				<h4>Walls - Check All (Take Photo's)</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="walls" placeholder="Notes/Comments"></div>
+				<h4>Lights</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="lights" placeholder="Notes/Comments"></div>
+				<h4>Toilet</h4>
+					<div class="form-group"><input class="form-control" type="text" required name="bowl" placeholder="Bowl"></div>
+					<div class="form-group"><input class="form-control" type="text" required name="seat" placeholder="Seat"></div>
+					<div class="form-group"><input class="form-control" type="text" required name="flush" placeholder="Flush"></div>
+				<h4>Bath / Shower</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="bathShower" placeholder="Notes/Comments"></div>
+				<h4>Shower Head</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="showerHead" placeholder="Notes/Comments"></div>
+				<h4>Sealant</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="sealant" placeholder="Notes/Comments"></div>
+				<h4>Shower Door</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="showerDoor" placeholder="Notes/Comments"></div>
+				<h4>Water</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="water" placeholder="Notes/Comments"></div>
+				<h4>Drains</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="drains" placeholder="Notes/Comments"></div>
+				<h4>Toilet Paper Holder</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="toiletPaperHolder" placeholder="Notes/Comments"></div>
+				<h4>Toilet Brush</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="toiletBrush" placeholder="Notes/Comments"></div>
+				<h4>Toiletries</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="toiletries" placeholder="Notes/Comments"></div>
+				<h4>Bin</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="bin" placeholder="Notes/Comments"></div>
+				<h4>Bathmat</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="bathmat" placeholder="Notes/Comments"></div>
+				<h4>Mirror</h4>
+						<div class="form-group"><input class="form-control" type="text" required name="mirror" placeholder="Notes/Comments"></div>
+				<h4>Additional Comments</h4>
+				<div class="form-group"><textarea class="form-control" id="comments" rows="3" name="comments" placeholder="Additional Comments"></textarea></div>
+				<div class="form-group"><button class="btn btn-lg btn-default btn-primary btn-block">Submit!</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<a href="/properties">Go Back</a>
+				
+          
+<% include ../partials/footer %>
