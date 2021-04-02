@@ -1,5 +1,5 @@
-var express                 = require("express"), //Magic
-    app                     = express(), //Magic
+var express                 = require("express"), 
+    app                     = express(), 
 	flash					= require("connect-flash"), //Flash Messages
     bodyParser              = require("body-parser"), //Intent Obatin
     mongoose                = require("mongoose"), //Database
@@ -26,7 +26,7 @@ var cleaningRoutes			= require("./routes/cleaning");
 
 
 
-mongoose.connect("mongodb+srv://johnarcher965:London2019@cluster0-kfjqs.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true});
+mongoose.connect("mongodb+srv://user:password@cluster0-kfjqs.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true});
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
